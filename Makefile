@@ -17,6 +17,12 @@ run-%: $(BIN_DIR)/day% $(INPUT_DIR)/day%.txt
 run2-%: $(BIN_DIR)/day%_2 $(INPUT_DIR)/day%.txt
 	./$(BIN_DIR)/day$*_2 < $(INPUT_DIR)/day$*.txt
 
+test-%: $(BIN_DIR)/day% $(INPUT_DIR)/test%.txt
+	./$(BIN_DIR)/day$* < $(INPUT_DIR)/test$*.txt
+
+test2-%: $(BIN_DIR)/day%_2 $(INPUT_DIR)/test%.txt
+	./$(BIN_DIR)/day$*_2 < $(INPUT_DIR)/test$*.txt
+
 fetch-%:
 	export $$(cat .env | xargs) && \
 	curl -v --cookie "$$AOC24_COOKIE" https://adventofcode.com/2024/day/$*/input -o input/day$*.txt
