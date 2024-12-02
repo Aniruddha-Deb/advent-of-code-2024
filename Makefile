@@ -1,5 +1,5 @@
-CC := clang++
-CFLAGS := -std=c++20 -Wall -O2
+CC := g++-14
+CFLAGS := -std=gnu++23 -Wall -O2
 BIN_DIR := bin
 SRC_DIR := src
 INPUT_DIR := input
