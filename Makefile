@@ -1,5 +1,5 @@
 CC := g++-14
-CFLAGS := -std=gnu++23 -Wall -O2
+CFLAGS := -std=gnu++23 -Wall -O2 -fopenmp
 BIN_DIR := bin
 SRC_DIR := src
 INPUT_DIR := input
